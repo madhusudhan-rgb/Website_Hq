@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects - My Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --glass: rgba(255, 255, 255, 0.08);
+      --glass-strong: rgba(255, 255, 255, 0.15);
+      --border: rgba(255, 255, 255, 0.15);
+      --accent: #00ff9d;
+      --text: #ffffff;
+      --muted: rgba(255, 255, 255, 0.65);
+      --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+      --blur: blur(20px);
+      --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.9));
+      min-height: 100vh;
+      padding-top: 100px;
+    }
+
+    .topnav {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: calc(100% - 40px);
+      max-width: 1280px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      border-radius: 9999px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      backdrop-filter: var(--blur);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+    }
+
+    .projects {
+      padding: 80px 20px;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 3rem;
+      margin-bottom: 70px;
+      background: linear-gradient(90deg, #fff, var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 32px;
+    }
+
+    .project-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .project-card:hover {
+      transform: translateY(-16px);
+      box-shadow: 0 25px 50px rgba(0, 255, 157, 0.2);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 32px;
+    }
+
+    .project-info h3 {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+    }
+
+    .project-info p {
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .tech {
+      background: rgba(0, 255, 157, 0.1);
+      color: var(--accent);
+      padding: 6px 16px;
+      border-radius: 9999px;
+      font-size: 0.9rem;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <a href="index.html" style="color:white; text-decoration:none; font-weight:700; font-size:1.4rem;">PORTFOLIO</a>
+    <div style="display:flex; gap:28px;">
+      <a href="index.html" style="color:white; text-decoration:none;">Home</a>
+      <a href="content.html" style="color:var(--accent); text-decoration:none;">Projects</a>
+      <a href="about.html" style="color:white; text-decoration:none;">About</a>
+    </div>
+  </nav>
+
+  <section class="projects">
+    <h1 class="section-title">Featured Projects</h1>
+    
+    <div class="projects-grid">
+      <!-- Add your real GitHub projects here -->
+      <div class="project-card">
+        <img src="https://images.ctfassets.net/23aumh6u8s0i/1GpPK36EMwOOZZcQPV4YRD/8acc95b8c3639be1be1d445e5e762dae/typescript" alt="Tsx project">
+        <div class="project-info">
+          <h3>Aichatbots</h3>
+          <p>This app includes a selection of chatbots to chat with. Its mainly a educational project as im still learning TSX</p>
+          <div class="tech-stack">
+            <span class="tech">React</span>
+            <span class="tech">Node.js</span>
+            <span class="tech">TypeScript</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/madhusudhan-rgb/TSX-proj" target="_blank">→ GitHub</a>
+           
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://images.ctfassets.net/23aumh6u8s0i/1GpPK36EMwOOZZcQPV4YRD/8acc95b8c3639be1be1d445e5e762dae/typescript" alt="Musicplayer tsx proj">
+        <div class="project-info">
+          <h3>Musicplayer TSX</h3>
+          <p>Plays music lol nothing else</p>
+          <div class="tech-stack">
+            <span class="tech">Typescript</span>
+            <span class="tech">React native</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/madhusudhan-rgb/musicplayer" target="_blank">→ GitHub</a>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="https://miro.medium.com/1*3IcLSFuT8PQg4cUBaRXH1A.png" alt="Python app">
+        <div class="project-info">
+          <h3>Python project</h3>
+          <div class="tech-stack">
+            <span class="tech">Python</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/madhusudhan-rgb/project" target="_blank">→ GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2026 • Personal Portfolio • Showcasing my GitHub work
+  </footer>
+</body>
+</html>
